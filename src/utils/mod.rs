@@ -174,6 +174,16 @@ where
 }
 
 #[must_use]
+pub fn to_txt_file_name<T>(novel_name: T) -> PathBuf
+where
+    T: AsRef<str>,
+{
+    let mut path = to_novel_dir_name(novel_name);
+    path.set_extension("txt");
+
+    path
+}
+
 pub fn to_markdown_file_name<T>(novel_name: T) -> PathBuf
 where
     T: AsRef<str>,

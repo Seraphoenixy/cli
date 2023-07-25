@@ -119,6 +119,7 @@ where
     utils::convert(&mut novel, &config.converts).await?;
 
     match config.format {
+        Format::Txt => renderer::generate_txt(novel, &config.converts).await?,
         Format::Pandoc => renderer::generate_pandoc_markdown(novel, &config.converts).await?,
         Format::Mdbook => renderer::generate_mdbook(novel, &config.converts).await?,
     };

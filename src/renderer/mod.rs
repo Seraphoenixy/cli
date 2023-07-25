@@ -1,8 +1,10 @@
 mod mdbook;
 mod pandoc;
+mod txt;
 
 pub use self::mdbook::*;
 pub use self::pandoc::*;
+pub use self::txt::*;
 
 #[inline]
 #[must_use]

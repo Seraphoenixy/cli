@@ -38,6 +38,7 @@ pub enum Source {
 #[must_use]
 #[derive(Clone, PartialEq, ValueEnum, AsRefStr)]
 pub enum Format {
+    Txt,
     Pandoc,
     Mdbook,
 }
