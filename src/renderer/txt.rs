@@ -81,7 +81,8 @@ where
                             buf.write_str("\n")?;
                         }
                         Content::Image(image) => {
-                            buf.write_str(&super::image_markdown_str(&image.file_name))?;
+                            let _ = &image.file_name;
+                            //buf.write_str(&super::image_markdown_str(&image.file_name))?;
                         }
                     }
                 }
